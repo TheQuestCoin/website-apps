@@ -1,0 +1,284 @@
+<!doctype html>
+<!-- Messyd3d, sanchopanza 2018 DeepWeaver version 0.1.2 -->
+<html>
+   <head>
+      <!-- Global Site Tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131509952-1"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         
+         gtag('config', 'UA-131509952-1');
+      </script>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Crypto Quest Movement</title>
+      <!-- main css -->
+      <link href="css/deepStyling.css" rel="stylesheet" type="text/css">
+      <!-- fonts -->
+      <link rel="stylesheet" href="https://use.typekit.net/arf5khp.css">
+      <link rel="stylesheet" href="https://use.typekit.net/xyd1aol.css">
+      <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+   </head>
+   <body>
+      <script src="js/stats.min.js"></script>
+      <!-- Audio Content -->
+      <audio id="deniedSound" src="sounds/deniedBeep.mp3"></audio>
+      <audio id="clickSound" src="sounds/clickCoin.mp3"></audio>
+      <audio id="padSound" src="sounds/numPadBeep.mp3"></audio>
+      <audio id="misterySound" src="sounds/Menu15.mp3"></audio>
+      <audio id="openSound" src="sounds/Button46.mp3"></audio>
+      <audio id="closeSound" src="sounds/Rollover06.mp3"></audio>
+      <audio id="solveSound" src="sounds/Menu04.mp3"></audio>
+      <audio id="humSound" src="sounds/LowHum01.mp3"></audio>
+      <audio id="zenSound" src="sounds/zenSound.mp3"></audio>
+      <audio id="errorSound" src="sounds/PowerDown06.mp3"></audio>
+      <audio id="startSound" src="sounds/PowerUp05.mp3"></audio>
+      <audio id="clearSound" src="sounds/Beep28.mp3"></audio>
+      <audio id="musicSound" src="sounds/Urban_05.mp3"></audio>
+      <!-- Display loader -->
+      <div id="loading" class="loading">
+         <img src="img/loadingicon.gif" height="50" width="50" ><br>
+         <img src="img/shinyCoin.png" height="50" width="50" alt="loading"><br>
+         <p>...LOADING...</p>
+      </div>
+      <div style="display:none;" id="content" class="content">
+         <div class="christmas"></div>
+         <!-- Main Page -->
+         <div class="container">
+            <!-- NumberLock -->
+            <div class="numPadBox" >
+               <div class="box2Hide" id="box" data-tilt>
+                  <div class="box">
+                     <button id="1">1</button><button id="2">2</button><button id="3">3</button><br>
+                     <button id="4">4</button><button id="5">5</button><button id="6">6</button><br>
+                     <button id="7">7</button><button id="8">8</button><button id="9">9</button><br>
+                     <button id="c">C</button>
+                  </div>
+               </div>
+            </div>
+            <div class="displayholder">
+               <div class="display" id="display">
+                  <p class="numerPad" id="numberPad"></p>
+               </div>
+            </div>
+            <!-- Logo and social icons -->
+            <header class="header">
+               <a href="index.html"><img src="../../Desktop/deepweaver_root/deeplogotest1.png" alt="mainPage" class="questLogo"></a>
+               <div class="socialIconsHolder">
+                  <img src="img/twitterXMASicon.png" alt="BitcoinTalk Forum" class="socialIcons" >
+                  <img src="img/btalkxlogo.png" alt=""  class="socialIcons">
+                  <img src="img/escanlogo.png" alt=""  class="socialIcons">
+                  <img src="img/socialCball.png" alt="" class="socialIcons">
+                  <img src="img/telexlogo.png" alt="" class="socialIcons">
+               </div>
+            </header>
+            <!-- paralax animation  -->
+            <section class="banner" >
+               <div class="cityBlock">
+                  <img src="img/cityAwake.png" id="questBuilding" onClick="playmeDen()" alt="" class="cityAwakens" >
+                  <img src="img/commAwake.png" alt="" class="communityAwakens">
+                  <img src="img/mafiaAwake.png" alt="" class="mafiaAwakens" id="mafia">
+                  <img src="img/citySleeps.png" class="citySleeps" onClick="knockknock()">
+               </div>
+               <!-- Qick Info -->
+               <img src="img/paralaxback2.png" alt="" class="parallaxInfo">
+               <img src="clipart-design-fancy-1.png" class="clipart">
+               <h2 class="parallax">DEEP NEW WORLD</h2>
+               <h2 class="parallax">MEMORANDUM</h2>
+               <p class="parallax_description" >
+                  We want to create an open source/moddable gaming platform where the community can choose how our games evolve while being main investors from
+                  quest-coin distribution. In modern day its especially important that players decide what thay want do to see in their games. One vital part in such crypto model is communication. Between devs, artists, mappers, testers, players etc. 
+                  That's why we invite everyone to our social networks, gits etc and ask you to join us on this epic adventure.<br>
+                  Quest coin/Deepweaver community is a place for many questions to be asked and many voices to be heard. We welcome everyone.
+                  But remember crypto is Proof of Work but not Stupid Proof, so please please be careful with your own private data.
+                   DO NOT TRUST ANYONE with your keys or coins. Don’t install any programs or open any links without double checking
+                  They are from a reliable source. Our karma provides ok indication of reliability but still please be cautious.
+                  You can always ask for advice and instruction in our chats, but always think for yourself and do not hurry if dealing with wallets etc.
+                  In crypto there is no central server and transactions are irreversible - in Crypto, you are responsible for your wealth and well being.<br> We persue the idea of 
+                  not punishing bad guys but rather rewarding the good guys. So please think for your self and help others
+               </p>
+               <img src="img/shinyCoin.png" id="Coin" class="coinHide" alt="shiny coin">
+               <img src="img/shinyCoin.png" id="CoinInv" class="coinHide" onClick="clickme()">
+            </section>
+            <!-- Info-stand Section -->
+            <section class="intro" >
+               <hr>
+               <div class="column">
+                  <aside class="right_article" ><img src="img/mainPageInfo.png" alt="" class="questCoinInfo"> </aside>
+               </div>
+               <div class="column" >
+                  <h3>What is QuestCoin:</h3>
+                  <p> QUEST coin is a virtual cryptocurrency for DeepWeaver universes, based on peer-to-peer technologies. Initial supply is created solely from quests, puzzles and storyline system. Later we reward gitHub commits, art-illustration and many other jobs focused on improving our worlds. Note: Sometimes roadmap will not progress forward until x amount of quests are solved.</p>
+                  <h3>What is DeepWeaver:</h3>
+                  <p>Blockchain cities in VR are awesome, but without a story, it looks more like a flat template. Immersive interesting worlds require proper planning and outlined art canvas, total freedom may lead to diversity Overflow, graphical chaos, and questionable usability. Our unique distribution system structures our worlds and our platform puts tools and connections in hands of those who want to create their own virtual worlds.</p>
+                  <p>For more info please look around our site - feel free to contact us. We value our community and want to gather free creators from around the world</p>
+               </div>
+            </section>
+            <!-- Statistics / needs initial immision for live feed -->
+            <div class="coinStatistics">
+               <div class="thumbnail2" >
+                  <h1 class="stats" id="totalSupply">Loading..</h1>
+                  <h4>TOKENS</h4>
+                  <p>Tokens in circulation</p>
+               </div>
+               <div class="thumbnail2">
+                  <h1 class="stats" id="questData">Loading..</h1>
+                  <h4>QUESTS</h4>
+                  <p>Solved since launch</p>
+               </div>
+               <div class="thumbnail2">
+                  <h1 class="stats">125.000</h1>
+                  <h4>PRIZE</h4>
+                  <p>Biggest quest reward prize</p>
+               </div>
+               <div class="thumbnail2">
+                  <h1 class="stats" id="halfing">180</h1>
+                  <h4>TILL NEXT</h4>
+                  <p>Reward adjustment</p>
+               </div>
+            </div>
+            <div class="answer" id="reward"></div>
+            <!-- Detailed Information -->
+            <div class="gallery">
+               <div class="thumbnail" id="whitepaper" data-tilt>
+                  <h4>WHITEPAPER</h4>
+                  <p class="tag">AND CONTACTS</p>
+                  <p class="text_column">Our whitepaper is in in-progress mode and team will be revealing true id with storyline.</p>
+               </div>
+               <div class="thumbnail" id="roadmapModal" data-tilt>
+                  <h4>ROADMAP</h4>
+                  <p class="tag">EVOLUTION OF QUEST</p>
+                  <p class="text_column">Information about stages. Our RoadMap constantly updates, we try to keep things fresh and constant. </p>
+               </div>
+               <div class="thumbnail" id="deepweaverInfo" data-tilt>
+                  <h4>DEEPWEAVER</h4>
+                  <p class="tag">WHY IT'S AWSOME</p>
+                  <p class="text_column">Virtual world creation rules and basic explanaition of DeepWeaver universes mechanics.</p>
+               </div>
+               <div class="thumbnail" id="questDistribution" data-tilt>
+                  <h4>QUEST EMISSION</h4>
+                  <p class="tag">HOW IT WORKS</p>
+                  <p class="text_column">Quick tour around our unique emission system with pictures! Now includes our take on fair distribution.</p>
+               </div>
+            </div>
+            <hr>
+            <!-- Copyrights Section -->
+            <div class="CIRCLEOBJECT" style="display:none;" id="questMe"></div>
+            <div class="SCRIPT">
+               <div class="EMPTYBLOCK"><img src="img/bottomtest1.png" class="WORLDSBACK"> </div>
+               <div class="copyright">&copy;2017-2018<br> <strong>Smokey Chainz<br> & Well Played Studios</strong></div>
+            </div>
+         </div>
+         <div class="snowflakes">
+         </div>
+         <!-- Main Container and Html Ends -->
+      </div>
+      <div id="modals">
+         <!-- Modal windows -->
+         <!--First QUEST DIALOGE WINDOW-->
+         <div id="_questMe" class="QuestInterface">
+            <div class="modal-content3">
+               <div class="modal-header">
+                  <div class="messageBoxOn"> </div>
+                  <h2>"Quest that started it all.."</h2>
+                  <img src="puzzles/questChrismasHat.png" width="100%">
+                  <img src="puzzles/QUESTSATOSHI.png" width="100%">
+               </div>
+            </div>
+         </div>
+         <!--NPC DIALOGE WINDOW-->
+         <div id="_whitepaper" class="NPCtalk">
+            <div class="modal-content2">
+               <div class="modal-header">
+                  <div class="messageBoxOn"> </div>
+                  <div class="bobbleHead"></div>
+                  <div class="bobbleTalk"></div>
+                  <h2>NPC TALK BOOBLE</h2>
+               </div>
+            </div>
+         </div>
+         <!--Quest distribution and emission Info Window-->
+         <div id="_questDistribution" class="modal">
+            <!-- Modal content -->
+            <!-- Modal content -->
+            <div class="modal-content" data-tilt>
+               <div class="modal-header">
+                  <h2>Quest coin distribution</h2>
+               </div>
+               <div class="modal-body">
+                  <section class="intro">
+                     <img src="img/QuestDistributionInfo.png">
+                  </section>
+               </div>
+               <div class="modal-footer">
+                  <h3>Back to mainpage</h3>
+               </div>
+            </div>
+         </div>
+         <div id="_deepweaverInfo" class="modal">
+            <!-- Modal content -->
+            <!-- Modal content -->
+            <div class="modal-content" data-tilt>
+               <div class="modal-header">
+                  <h2>DeepWeaver Platform</h2>
+               </div>
+               <div class="modal-body">
+                  <section class="intro">
+                     <img src="img/DeepweaverInfo.png">
+                  </section>
+               </div>
+               <div class="modal-footer">
+                  <h3>Back to mainpage</h3>
+               </div>
+            </div>
+         </div>
+         <!--RoadMap DeepWeaver Window-->
+         <div id="_roadmapModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+               <div class="modal-body">
+                  <img src="roadmap02.png" width="100%">
+                  <section class="intro">
+                  </section>
+               </div>
+               <div class="modal-footer">
+                  <h3>Back to mainpage</h3>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Error window -->
+      <div id="errorCheck" class="error" style="display: none;"></div>
+      <!-- Js scripts -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src="js/tilt.jquery.js"></script>
+      <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js" integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk=" crossorigin="anonymous"></script>
+      <script src="js/three.min.js"></script>
+      <script src="js/app.js"></script>
+      <script>
+	$(".christmas").css("hight", "130px");
+if ($(window).width() < 1150) {
+    window.location.replace("https://deep-quest.com/indexMobile.html");
+    throw new Error("You are on mobile!");
+};
+if ($(window).width() > 1750) {
+    $(".christmas").css("height", "160px");
+} else if ($(window).width() > 2150) {
+    $(".christmas").css("height", "200px");
+};
+
+$(document).ready(function() {
+    "use strict";
+    var audio = $("#startSound")[0];
+    audio.currentTime = 0;
+    audio.play();
+    $("#content").show();
+
+    $("#loading").hide();
+});
+	</script>
+   </body>
+</html>
