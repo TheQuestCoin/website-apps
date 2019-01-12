@@ -695,6 +695,7 @@ header {
 }
 
 .NPCtalk {
+	
 	margin-top: 50px;
 	display: none;
 	/* Hidden by default */
@@ -742,11 +743,27 @@ header {
 
 /* Modal Header */
 
+.modal-headerBob {
+	
+	padding: 2px 16px;
+	background-color: #21252A;
+	color: white;
+	height: 220px;
+}
 .modal-header {
 	padding: 2px 16px;
 	background-color: #21252A;
 	color: white;
 }
+.modal-headerBob img {
+	border-radius: 10px;
+	position: relative;
+	float: left;
+	margin: 10px;
+}
+
+
+
 
 
 /* Modal Body */
@@ -769,7 +786,7 @@ header {
 /* Modal Content */
 .modal-content {
 	z-index: 22;
-	background-color: #fefefe;
+	background-color: #21252A;
 	margin: 15% auto;
 	/* 15% from the top and centered */
 	padding: 20px;
@@ -782,7 +799,6 @@ header {
 	margin-top: 20px;
 	margin-bottom: auto;
 	position: relative;
-	background-color: #fefefe;
 	padding: 0;
 	border: 1px solid #888;
 	width: 80%;
@@ -794,7 +810,7 @@ header {
 .modal-content2 {
 	overflow: hidden;
 	z-index: 22;
-	background-color: #fefefe;
+	background-color: transparent;
 	margin: 35% auto;
 	/* 15% from the top and centered */
 	border: 1px solid #888;
@@ -947,7 +963,7 @@ header {
 	position: relative;
 	height: 200px;
 	width: 200px;
-	background-image: url(../questChrismasHat.png);
+	background-image: url(../img/questChrismasHat.png);
 	background-size: cover;
 }
 .bobbleTalk{
@@ -963,3 +979,5 @@ header {
 	margin-top: -50px;
 	
 }
+/* Password for the most stylish =^u^=  ----------------------------- */
+/* 'I am a CSS lover 2019' ------------------------------------------ */
