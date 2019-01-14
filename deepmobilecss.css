@@ -1,0 +1,1147 @@
+@charset "UTF-8";
+
+/* CSS DeepWeaver 2018 mobile */
+
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
+html {
+  box-sizing: border-box; 
+}
+
+*, *:before, *:after {
+  box-sizing: inherit; 
+}
+
+html {
+ 
+	background-color: #21252A;
+  overflow-y: scroll; 
+}
+
+
+a{
+  color: #181818;
+}
+a:hover,a:focus{
+  background: #181818;
+  color:#fff;
+}
+h2{
+  font-size: 1em;
+  font-weight: 400;
+}
+p{
+  margin-bottom:2em;
+}
+abbr{
+  cursor: help;
+}
+ul{
+  list-style: none;
+  padding: 0;
+}
+li{
+  margin:1em 0 0;
+}
+span{
+  display: block;
+  color:#E5C84A;
+  line-height:1;
+}
+
+kbd{
+  font-family: 'Inconsolata', monospace;
+  border:1px solid #999;
+  text-transform: uppercase;
+  padding:0 .2em;
+}
+input[type="text"]{
+  border: none;
+  font-family: inherit;
+  background: rgba(58,58,58,1.00);
+ color:#E5C84A;
+	padding:0 .5em;
+	min-width: 10px;
+	height: 30px;
+	margin-bottom: -8px;
+	margin-top: -8px;
+}
+input[type="text"]:focus{
+	background: rgba(58,58,58,1.00);
+  outline:none;
+	color:#E5C84A;
+	padding:0 .5em;
+	min-width: 10px;
+	height: 30px;
+	margin-bottom: -8px;
+	margin-top: -8px;
+}
+
+
+.containerFor{
+		width: 80%;
+		position: relative;
+		margin: auto;
+	margin-top: 5px;
+	}
+	
+	.slider{
+		
+		
+		 background-image: linear-gradient(#3494E6, #EC6EAD);
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		border-radius: 10px;
+		background-color: sandybrown;
+		z-index: 10;
+		margin: 3px;
+		margin-top: 5px;
+		transition: 0.1s linear;filter: grayscale(100%);
+	}
+.slider h3{
+		margin-top: 18px;
+	margin-left: 11px;
+	color: wheat;
+	}
+	.sliderBox{
+		font-size: 14px;
+		border-radius: 10px;
+		position: absolute;
+		background-color: rgba(33,33,33,1.00);
+		height: 60px;
+		width: 100%;
+	}
+	.sliderBox h2{
+		color:rgba(226,226,226,1.00);
+		position: absolute;
+		margin-top: 8px;
+		opacity: 0.9;
+		margin-left: 60px;
+	}
+	
+	
+	.unlockedArea{
+		
+		opacity: 0;
+		text-align: center;
+		border-radius: 10px;
+		position: absolute;
+		margin-top: 70px;
+		height: 200px;
+		width: 250px;
+		 background-image: linear-gradient(#3494E6, #EC6EAD);
+		background-size: cover;
+		background-repeat: no-repeat;
+		color: aliceblue;
+		transition: 0.5s linear;
+	}
+
+
+
+
+.command{
+	width: 90%;
+  font-weight: 700;
+	color:#E5C84A;
+	opacity: 0.8;
+	padding-top: 0px;
+}
+
+hr{
+	
+}
+
+main{
+	
+}
+
+
+.cliScreen{
+	padding: 10px;
+	padding-bottom: 50px;
+}
+
+section{
+  display: none;
+}
+.open{
+  display: block;
+}
+
+
+
+/* Body and loading ---------------------------------------------------------------------- */
+.mobileCli{
+	border-radius: 5px;
+	padding: 10px;
+	background-color:black;
+	bottom: 0;
+	color: #52BAD5;
+	width: 90%;
+	margin: auto;
+	position: relative;
+	margin-bottom: 10px;
+	transition: 0.4s linear;
+	display: none;
+	
+	
+	opacity: 0;
+}
+
+
+body {
+	overflow: auto;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	background-color: #21252A;
+	margin: 0;
+	margin-top: -20px;
+}
+
+.emptyModalBack {
+	position: relative;
+	/* Stay in place */
+	left: 14%;
+	top: 0;
+	width: 72%;
+	height: 2000px;
+	overflow: hidden;
+	background-color: yellow;
+	opacity: 0.5;
+	z-index: 21;
+}
+
+.loading {
+	background-color: #21252A;
+	margin-top: 150px;
+	padding-bottom: 10px;
+	text-align: center;
+	color: aliceblue;
+	width: 130px;
+	-webkit-filter: grayscale(100%);
+	/* Safari 6.0 - 9.0 */
+	filter: grayscale(100%);
+	animation: float 1s ease-in-out infinite;
+	margin-left: auto;
+	margin-right: auto;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.loading img {
+	margin-top: 50px;
+}
+
+.error {
+	overflow: hidden;
+	position: relative;
+	background-image: url(../img/ConCon_bsod.png);
+	background-size: contain;
+	height: 1000px;
+	margin: auto;
+}
+
+.content {
+	margin-top: 60px;
+	
+}
+
+hr {
+	border-color: #2A3135;
+}
+
+
+/* NumLockPad -------------------------------------------------Simple B64 puzzle*/
+
+button {
+	z-index: 21;
+	margin-left: 7px;
+	opacity: 0;
+	width: 20px;
+	height: 25px;
+	margin-top: 4px;
+	transition: all 0.3s linear;
+}
+
+.displayholder {
+	margin-left: 55px;
+	margin-top: 250px;
+	position: absolute;
+	z-index: 20;
+	transform: rotate(91deg);
+}
+
+.display {
+	opacity: 0.7;
+	color: black;
+	position: absolute;
+	font-size: 100px;
+	font-family: flood-std, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	transform: rotateZ(360deg);
+}
+
+
+
+@-webkit-keyframes greenPulse {
+	from {
+		transform: rotateZ(360deg);
+		text-shadow: 0 0 10px #fff, 0 0 100px #E2FB0F, 0 0 150px #5DC756;
+	}
+	to {
+		transform: rotateZ(360deg);
+		text-shadow: 0 0 5px #fff, 0 0 50px #E2FB0F, 0 0 75px #5DC756;
+	}
+}
+
+.answer {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 20;
+	font-family: voluta-script-pro, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	text-align: center;
+	color: #4E4E4E;
+	font-size: 55px;
+	margin-top: -50px;
+	margin-left: 0%;
+	transform: rotateZ(360deg)
+}
+
+.answer:hover {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	font-family: voluta-script-pro, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	z-index: 100;
+	text-align: center;
+	color: rgba(244, 228, 86, 1.00);
+	font-size: 55px;
+	margin-top: -50px;
+	margin-left: 0%;
+	transition: 0.5s linear;
+	transform: rotateZ(360deg);
+	-webkit-animation-name: greenPulse;
+	-webkit-animation-duration: 0.4s;
+	-webkit-animation-iteration-count: 2;
+}
+
+@-webkit-keyframes purplePulse {
+	from {
+		transform: rotateZ(360deg);
+		text-shadow: 0 0 10px #fff, 0 0 100px rgba(94, 204, 212, 1.00), 0 0 150px rgba(94, 204, 212, 1.00);
+	}
+	to {
+		transform: rotateZ(360deg);
+		text-shadow: 0 0 5px #fff, 0 0 50px #fff, 0 0 75px #fff;
+	}
+}
+
+.numPadBox{
+	position: absolute;
+	margin-top: 0px;
+	z-index: 21;
+}
+
+.box2{
+	opacity: 1;
+	width: 83px;
+	height: 120px;
+	position: absolute;
+	background-color: black;
+	margin-left: -100px;
+	margin-top: 10px;
+	padding: 10px;
+	transition: all 0.5s linear;
+}
+.box2Hide{
+	opacity: 0;
+	width: 80px;
+	height: 120px;
+	position: absolute;
+	background-color: black;
+	margin-left: 100px;
+	margin-top: 10px;
+	padding: 10px;
+}
+.box {
+	margin-top: 0px;
+	width: 100px;
+	height: 120px;
+	position: absolute;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url( ../img/numberpad.png);
+}
+
+
+/* Container ---------------------------------------------------------------------- */
+
+.container {
+	border-radius: 30px;
+	background-position: 20, 10;
+	background-image: url(../img/topslidein.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	overflow: hidden;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #2A3135;
+	outline-color: #2A3135;
+}
+
+
+/* Header ---------------------------------------------------------------------- */
+
+header {
+	z-index: 5;
+	border-radius: 5%;
+	margin-top: 30px;
+	background-repeat: repeat;
+	overflow: hidden;
+	width: 100%;
+	border-bottom: 5px solid #353635;
+	background: #030303;
+	margin: auto;
+	padding-bottom: 20px;
+}
+
+.questLogo {
+	
+}
+.logoHodler{
+	position: relative;
+	margin: auto;
+	width: 250px;
+}
+.logoHodler img{
+	padding-top: 20px;
+	width: 100%;
+}
+.socialIconsHolder {
+	position: relative;
+	margin: auto;
+	width: 250px;
+	padding-top: 0px;
+}
+
+.snowflakes {
+	margin-top: -45px;
+	height: 120px;
+	width: 100%;
+	z-index: 11;
+	position: relative;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	background-size: cover;
+	margin-bottom: -10px;
+	background-image: url(../img/christmasbottom.png);
+}
+
+.snowflakes2 {
+	position: relative;
+	margin: auto;
+	transform: rotate(0deg);
+	height: 300px;
+	opacity: 1;
+	z-index: 0;
+	overflow: hidden;
+	left: 0;
+}
+.snowflakes3 {
+	margin: auto;
+	position: relative;
+	transform: rotate(-90deg);
+	height: 150px;
+	opacity: 1;
+	z-index: 11;
+	overflow: hidden;
+	right: 0;
+}
+.christmas{
+	margin-top: -10px;
+	height: 120px;
+	width: 100%;
+	z-index: 11;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-size: cover;
+	background-image: url(  ../img/christmas.png);
+}
+
+
+
+
+.socialIcons {
+	padding-top: 00px;
+	margin-top: -7px;
+	width: 45px;
+	margin-right: 5px;
+	float: right;
+	position: relative;
+	opacity: 0.5;
+	-webkit-filter: grayscale(100%);
+	/* Safari 6.0 - 9.0 */
+	filter: grayscale(100%);
+}
+
+.socialIcons:hover {
+	padding-top: 0px;
+	transform: scale(1.1);
+	float: right;
+	position: relative;
+	opacity: 1;
+	-webkit-filter: grayscale(0%);
+	/* Safari 6.0 - 9.0 */
+	filter: grayscale(0%);
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+
+/* Interactive Banner ---------------------------------------------------------------------- */
+
+.banner {
+	-ms-overflow-style: none;
+	overflow: -moz-scrollbars-none;
+	overflow: scroll;
+	background-color: black;
+	background-image: url( ../fast.gif);
+	height: 225px;
+	background-size: 85%;
+	background-repeat: repeat-x;
+}
+
+.mafiaAwakens {
+	margin-top: -75px;
+	margin-left: 820px;
+	min-width: 230px;
+	float: left;
+	width: 300px;
+	position: absolute;
+	z-index: 1;
+}
+
+.communityAwakens {
+	margin-top: -75px;
+	margin-left: 820px;
+	min-width: 230px;
+	float: left;
+	width: 300px;
+	position: absolute;
+	z-index: 1;
+}
+
+.cityAwakens {
+	margin-top: -75px;
+	margin-left: 820px;
+	min-width: 230px;
+	float: left;
+	width: 300px;
+	position: absolute;
+	z-index: 1;
+}
+
+.citySleeps {
+	margin-top: -75px;
+	margin-left: 820px;
+	min-width: 230px;
+	width: 300px;
+	position: absolute;
+	z-index: 6;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.profile1300 {
+	margin-top: -75px;
+	margin-left: 820px;
+	float: left;
+	min-width: 230px;
+	width: 300px;
+	position: absolute;
+	z-index: 9;
+}
+
+.profile1301 {
+	opacity: 0;
+	margin-top: -75px;
+	margin-left: 820px;
+	float: left;
+	min-width: 230px;
+	width: 300px;
+	position: absolute;
+	z-index: 1;
+}
+
+.cityBlock {
+	margin-top: 70px;
+	margin-left: 40px;
+	z-index: 2;
+	position: absolute;
+	animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+		transform: translatey(-10px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+		transform: translatey(0px);
+	}
+}
+
+.coinHide {
+	width: 1px;
+	margin-top: -550px;
+	position: absolute;
+	margin-left: 340px;
+	z-index: -1;
+}
+
+.coinDrop {
+	z-index: 1;
+	width: 110px;
+	margin-top: -300px;
+	position: absolute;
+	margin-left: 320px;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.coinDropInvisible {
+	opacity: 0;
+	z-index: 50;
+	width: 110px;
+	margin-top: -300px;
+	position: absolute;
+	margin-left: 320px;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.parallaxInfo {
+	position: relative;
+	float: left;
+	margin-left: -1%;
+	margin-top: -30px;
+	width: 92%;
+	min-height: 270px;
+}
+
+.parallax {
+	margin-top: -10px;
+	padding-right: 147px;
+	float: right;
+	color: #ccc;
+	text-align: center;
+	width: 70%;
+	letter-spacing: 2px;
+}
+
+.parallax_description {
+	color: #ccc;
+	text-align: center;
+	padding-right: 210px;
+	width: 60%;
+	float: right;
+	font-weight: lighter;
+	line-height: 23px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: -10px;
+}
+
+
+/* Intro ---------------------------------------------------------------------- */
+
+.modal-body .intro img {
+	width: 100%;
+}
+
+.intro {
+	margin-top: -8px;
+	background-image: url(../img/dark-mosaic.png);
+	background-size: contain;
+	background-repeat: repeat;
+	background-color: #343A40;
+	padding-bottom: 7px;
+}
+
+.column {
+	margin-left: -16%;
+	width: 30%;
+	text-align: center;
+	padding-top: 10px;
+	float: left;
+}
+
+.intro .column h3 {
+	color: #CCCCCC;
+	;
+	text-align: center;
+}
+
+.intro .column p {
+	color: #CCCCCC;
+	padding-left: 30px;
+	padding-right: 30px;
+	text-align: justify;
+	line-height: 25px;
+	font-weight: lighter;
+	margin-left: 20px;
+	margin-right: 20px;
+	width: 80%;
+	margin-top: 4%;
+}
+
+.questCoinInfo {
+	min-width: 700px;
+	position: absolute;
+	width: 52%;
+	margin-left: 290px;
+}
+
+
+/* Stats Gallery ---------------------------------------------------------------------- */
+
+.stats {
+	color: #717070;
+	margin-bottom: 5px;
+}
+
+.coinStatistics {
+	opacity: 0;
+	border-radius: 10%;
+	margin-bottom: 0px;
+	padding-top: 46px;
+	height: 70px;
+	clear: both;
+	display: inline-block;
+	width: 100%;
+	background-color: #343A40;
+	transition: 0.4s linear;
+	margin-top: -7px;
+}
+
+.coinStatisticsHide {
+	height: 85px;
+	clear: both;
+	display: inline-block;
+	width: 100%;
+	background-color: #343A40;
+}
+
+.thumbnailHide {
+	background-color: #343A40;
+	font-size: 13px;
+	width: 25%;
+	text-align: center;
+	float: left;
+	margin-top: 5px;
+}
+
+.thumbnail2 {
+	font-size: 13px;
+	width: 50%;
+	text-align: center;
+	float: left;
+	margin-top: -60px;
+}
+
+.coinStatistics .thumbnail2 h4 {
+	margin-top: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	color: #52BAD5;
+}
+
+.coinStatistics .thumbnail2 p {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	color: #A3A3A3;
+}
+
+
+/* Detailed Info ----------------------------------------------------------------------*/
+
+.text_column {
+	width: 90%;
+	text-align: left;
+	font-weight: lighter;
+	line-height: 25px;
+	float: left;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: #2A3135;
+}
+
+.gallery {
+	background-size: contain;
+	background-repeat: no-repeat;
+	clear: both;
+	display: inline-block;
+	width: 100%;
+	background-color: #343A40;
+	padding-bottom: 35px;
+	padding-top: 0px;
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+
+.thumbnail {
+	z-index: 21;
+	width: 23%;
+	text-align: center;
+	float: right;
+	margin-top: 35px;
+	background-color: #21252A;
+	padding-bottom: 20px;
+	margin-left: 1%;
+	margin-right: 1%;
+	border-radius: 3px;
+	padding-top: 20px;
+	border-bottom: 4px solid #343A40;
+	transform-style: preserve-3d;
+}
+
+.gallery .thumbnail h4 {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	color: #52BAD5;
+	text-align: left;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.gallery .thumbnail p {
+	margin: 0;
+	color: #B3B3B3;
+	text-align: left;
+	padding-left: 20px;
+}
+
+.gallery .thumbnail .tag {
+	color: #5D5E5D;
+	padding-bottom: 4px;
+	padding-top: 4px;
+	text-align: left;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+/* The Modal (background) */
+
+.infoPages {
+	object-fit: contain;
+}
+
+.modal {
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 20;
+	/* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	overflow: auto;
+	/* Enable scroll if needed */
+	background-color: rgb(0, 0, 0);
+	/* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4);
+	/* Black w/ opacity */
+}
+
+.NPCtalk {
+	margin-top: 50px;
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 21;
+	/* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	overflow: auto;
+	/* Enable scroll if needed */
+}
+
+.QuestInterface {
+	margin-top: 0px;
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 21;
+	/* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	overflow: auto;
+	/* Enable scroll if needed */
+	background-color: rgb(0, 0, 0);
+	/* Fallback color */
+	background-color: rgba(0, 0, 0, 0.9);
+	/* Black w/ opacity */
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+	z-index: 22;
+	background-color: #fefefe;
+	margin: 15% auto;
+	/* 15% from the top and centered */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+	/* Could be more or less, depending on screen size */
+}
+
+
+/* Modal Header */
+
+.modal-header {
+	padding: 2px 16px;
+	background-color: #21252A;
+	color: white;
+}
+
+
+/* Modal Body */
+
+.modal-body {
+	z-index: 21;
+	background-color: #2A3135;
+}
+
+
+/* Modal Footer */
+
+.modal-footer {
+	padding: 2px 16px;
+	background-color: #21252A;
+	color: white;
+}
+
+
+/* Modal Content */
+
+.modal-content {
+	z-index: 22;
+	max-width: 1200px;
+	margin-top: 20px;
+	margin-bottom: auto;
+	position: relative;
+	background-color: #fefefe;
+	padding: 0;
+	border: 1px solid #888;
+	width: 80%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	animation-name: animatetop;
+	animation-duration: 0.4s
+}
+
+.modal-content2 {
+	max-width: 1200px;
+	margin-left: 10%;
+	margin-top: 30%;
+	position: relative;
+	background-color: #fefefe;
+	padding: 0;
+	border: 1px solid #888;
+	width: 80%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	animation-name: animatebot;
+	animation-duration: 1.4s
+}
+
+.modal-content3 {
+	max-width: 1200px;
+	text-align: center;
+	margin-bottom: 1%;
+	z-index: 40;
+	margin-left: 10%;
+	margin-top: 1%;
+	position: relative;
+	background-color: black;
+	padding: 0;
+	border: 1px solid #888;
+	width: 80%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	animation-name: animatebot;
+	animation-duration: 2.5s
+}
+
+
+/* Add Animation */
+
+@keyframes animatetop {
+	from {
+		top: -300px;
+		opacity: 0
+	}
+	to {
+		top: 0;
+		opacity: 1
+	}
+}
+
+@keyframes animatebot {
+	from {
+		bottom: -300px;
+		opacity: 0
+	}
+	to {
+		bottom: 0;
+		opacity: 1
+	}
+}
+
+
+/* End Of Page ---------------------------------------------------------------------- */
+
+.copyright {
+	position: relative;
+	z-index: 10;
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: right;
+	padding-right: 5px;
+	margin-top: 40px;
+	padding-top: 50px;
+	color: floralwhite;
+	text-transform: uppercase;
+	font-weight: lighter;
+	letter-spacing: 2px;
+	border-top-width: 2px;
+	padding-left: 5px;
+}
+
+.EMPTYBLOCK {
+}
+
+.SCRIPT {
+	
+}
+
+.WORLDSBACK {
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 1;
+	z-index: -5;
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 1008px;
+	margin-left: -360px;
+	margin-top: 90px;
+}
+
+.CIRCLEOBJECT {
+	background-size: contain;
+	background-image: url(../img/questsign.png);
+	z-index: 12;
+	color: white;
+	margin-top: 21px;
+	margin-left: 455px;
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	opacity: 0.5;
+	border-radius: 50%;
+	behavior: url(PIE.htc);
+	animation: float 2s ease-in-out infinite;
+	-webkit-transition: all 0.7s ease;
+	-moz-transition: all 0.7s ease;
+	-ms-transition: all 0.7s ease;
+	-o-transition: all 0.7s ease;
+	transition: all 0.7s ease;
+}
+
+.CIRCLEOBJECT:hover {
+	background-image: url(../img/questsign.png);
+	z-index: 22;
+	color: white;
+	margin-top: -6px;
+	margin-left: 445px;
+	position: absolute;
+	height: 120px;
+	width: 120px;
+	opacity: 0.7;
+	border-radius: 50%;
+	behavior: url(PIE.htc);
+}
+
+
+.bobbleHead{
+	float: left;
+	position: relative;
+	height: 200px;
+	width: 200px;
+	background-image: url(../questChrismasHat.png);
+	background-size: cover;
+}
+.bobbleTalk{
+	float: right;
+	position: relative;
+	height: 200px;
+	width: 500px;
+	background-color: gray;
+}
+.clipart{
+	position: relative;
+	margin-left: 320px;
+	margin-top: -50px;
+	
+}
