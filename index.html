@@ -23,7 +23,7 @@
       <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
    </head>
    <body>
-      <script src="js/stats.min.js"></script>
+      
       <!-- Audio Content -->
       <audio id="deniedSound" src="sounds/deniedBeep.mp3"></audio>
       <audio id="clickSound" src="sounds/clickCoin.mp3"></audio>
@@ -271,15 +271,45 @@ if ($(window).width() > 1750) {
     $(".christmas").css("height", "200px");
 };
 
+		 
+		
+		 
+		 
+		 		  
 $(document).ready(function() {
-    "use strict";
-    var audio = $("#startSound")[0];
+	"use strict";
+    let audio = $("#startSound")[0];
     audio.currentTime = 0;
     audio.play();
+	
+	
+	$(window).on("load", function() {
+		console.log("ALL LOADED");
+    startSite();
+});
+	
+	
+	
+	/*console.log($('img').length);	
+	
+	 let loadedImages = 0; 
+		   $('img').on('load', function(event) {
+    loadedImages++;
+   console.log(loadedImages);
+  });*/
+});
+		 
+		 
+		
+		  
+	function startSite(){
+		
     $("#content").show();
 
     $("#loading").hide();
-});
+	}	  
+		  
+		  
 	</script>
    </body>
 </html>
